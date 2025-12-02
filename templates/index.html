@@ -20,9 +20,17 @@
                 <div class="first-div">
                     <h1>Writing test</h1>
                     <p>Write whatever comes to you mind without any stop; you lost all of your text once you stop writing</p>
-                    <div class="second-div-textarea">
-                        <textarea class="text-area" placeholder="Start typing..."></textarea>
-                    </div>
+
+                    <form class="text-area-class" method="POST" id="text-area-id" action="{{ url_for('start') }}">
+                        <div class="second-div-textarea">
+                            <textarea name="note" class="text-area" placeholder="Start typing..."></textarea>
+                        </div>
+                    </form>
+                    <!-- This part doesn't work -->
+                    {% for i in word %}
+                    <p>This is your text: {{ i }}</p>
+                    {% endfor %}
+
                 </div>
             </main>
         </section>

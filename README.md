@@ -19,18 +19,20 @@ This project is part of a web development exercise to practice Flask, templates,
 ## 📂 Project Structure
 ```commandline
 project/
-│ app.py
-│ README.md
-│ requirements.txt
+│
+├─ .venv/  
 │
 ├── templates/
-│ └── index.html
+│    └── index.html
 │
-└── static/
-│   └── css/
-│     └── main.css
-│   └── images/
-│     └── writing.png
+├── static/
+│    ├── css/
+│    │    └─ main.css
+│    └── images/
+│         └── writing.png
+│
+├─  README.md
+├─  requirements.txt
 └── main.css
 ```
 
