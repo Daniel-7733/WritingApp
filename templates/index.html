@@ -12,24 +12,31 @@
         />
 
         <link rel="icon" type="image/x-icon" href="static/images/writing.png">
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     </head>
     <body>
         <section class="main-section">
             <main class="main-part">
                 <div class="first-div">
+
                     <h1>Writing test</h1>
                     <p>Write whatever comes to you mind without any stop; you lost all of your text once you stop writing</p>
 
-                    <form class="text-area-class" method="POST" id="text-area-id" action="{{ url_for('start') }}">
+                    <form class="textarea-cls-frm" method="POST" id="textarea-frm-id" action="{{ url_for('start') }}">
                         <div class="second-div-textarea">
-                            <textarea name="note" class="text-area" placeholder="Start typing..."></textarea>
+                            <textarea id="box" name="note" class="textarea-cls" placeholder="Start typing..." required></textarea>
+                            <p id="status">Start typing to begin…</p>
+                            <script src="{{ url_for('static', filename='js/main.js') }}"></script>
                         </div>
                     </form>
-                    <!-- This part doesn't work -->
-                    {% for i in word %}
-                    <p>This is your text: {{ i }}</p>
-                    {% endfor %}
+
+                    <form class="btn-cls-frm" method="POST" id="btn-frm-id" action="{{ url_for('start_btn') }}">
+                        <div class="second-div-btn">
+                            <button type="submit" id="start-btn-id">Start</button>
+                            <p class="initiate-t-cls-p" id="initiate-t-id-p">Timer has begun at {{ now_time }}</p>
+                        </div>
+                    </form>
 
                 </div>
             </main>
