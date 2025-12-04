@@ -8,8 +8,8 @@ body {
     padding: 10px;
 }
 
-.text-area{
+.textarea-cls{
     font-size: 20px;
     width: 500px;
-    height: 850px;
+    height: 600px;
 }
