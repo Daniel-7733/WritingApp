@@ -24,13 +24,9 @@ def start() -> str:
 
     :return: index html and words
     """
-    word: str = ""
-    if request.method == "POST":
-        while True:
-            text: str = request.form.get("note")
-            word += text
+    text: str = request.form.get("note", "")
+    return render_template("index.html", word=text)
 
-    return render_template("index.html", word=word)
 
 
 @app.route("/start_btn", methods=["GET", "POST"])
